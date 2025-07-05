@@ -1,5 +1,7 @@
 # Warp Settings Manager - User Guide
 
+**Shell Environment: BASH PRIMARY** - Commands work in bash (primary) and fish (secondary). ZSH is not supported.
+
 ## 🚀 Quick Setup for New Users
 
 ### Install Shell Aliases (Auto-Detects Bash/Fish)

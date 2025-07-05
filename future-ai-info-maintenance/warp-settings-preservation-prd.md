@@ -1,5 +1,7 @@
 # Warp Terminal Settings Preservation - Product Requirements Document
 
+**Shell Environment: BASH PRIMARY** - System designed with bash as the main shell environment, with fish as secondary support.
+
 ## 1. Executive Summary
 
 ### Problem Statement

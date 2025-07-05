@@ -3,6 +3,8 @@
 ## Overview
 This document tracks every single change made during the implementation of the Warp Settings Preservation system from inception to completion.
 
+**Shell Environment: BASH PRIMARY** - System designed with bash as the main shell environment, with fish as secondary support.
+
 ---
 
 ## Phase 1: Foundation and Backup System (Tasks 1-4)
@@ -463,3 +465,54 @@ if args.mcp_health:
 - Integration: ✅ Complete end-to-end workflow working
 
 The Warp Settings Preservation system is **complete and production-ready** for preserving MCP server configurations across account transitions.
+
+---
+
+## Phase 6: Bash Shell Integration & Auto-Installer (July 5, 2025)
+
+### Shell Support Enhancement
+**Files Created:**
+- `warp-aliases.bash` - Complete bash version of all aliases with feature parity to fish
+- `install-warp-aliases.sh` - Auto-installer that detects bash/fish and installs appropriate aliases
+
+**Key Features Implemented:**
+- **Bash Primary Support**: Full bash shell integration as primary environment
+- **Auto-Detection**: Installer detects current shell (bash/fish) and installs appropriate aliases
+- **Cross-Shell Compatibility**: Works seamlessly with both bash and fish
+- **ZSH Rejection**: Explicitly refuses to work with zsh (as requested)
+- **Feature Parity**: All bash aliases have identical functionality to fish versions
+
+**Shell Support Matrix:**
+- ✅ **Bash** - Full support with auto-installer (PRIMARY)
+- ✅ **Fish** - Full support with auto-installer (SECONDARY)
+- 🚫 **ZSH** - Explicitly not supported
+
+**Commands Available in Both Shells:**
+- `warp-backup [name]` - Create complete backup
+- `warp-backup-enhanced [name]` - Enhanced backup (recommended)
+- `warp-restore <name>` - Restore from backup
+- `warp-backup-quick` - Quick timestamped backup
+- `warp-list-backups` - List all backups with MCP counts
+- `warp-health` - Check current MCP status
+- `warp-status` - Check system status
+- `warp-emergency-backup` - Emergency manual backup
+
+**Documentation Updates:**
+- Updated README.md with bash support and auto-installer instructions
+- Updated warp_guide.md with bash-first approach
+- Updated all future-ai-info-maintenance documentation
+- Added shell support section to all relevant docs
+
+**Testing Results:**
+- ✅ All bash aliases tested and working
+- ✅ Auto-installer detects shell correctly
+- ✅ Cross-shell compatibility verified
+- ✅ ZSH rejection working as intended
+- ✅ All commands maintain feature parity between shells
+
+**Final System Status:**
+- **Primary Shell**: Bash (main environment)
+- **Secondary Shell**: Fish (also fully supported)
+- **Rejected Shell**: ZSH (explicitly not supported)
+- **Auto-Installer**: Working and tested
+- **10+ Year Stability**: Maintained with bash-first design

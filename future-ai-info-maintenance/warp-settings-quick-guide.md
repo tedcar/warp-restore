@@ -1,5 +1,7 @@
 # Warp Settings Preservation - Enhanced Quick Guide
 
+**Shell Environment: BASH PRIMARY** - Commands work in bash (primary) and fish (secondary). ZSH is not supported.
+
 ## When to Use This System
 
 🔄 **Before creating a new Warp account**
@@ -8,15 +10,30 @@
 🔄 **After configuring MCP servers with API keys**
 🔄 **Weekly backup routine (recommended)**
 
-## ⚡ NEW: Enhanced Commands (Recommended)
+## ⚡ Shell Aliases (Recommended - Auto-Installed)
+
+### 🚀 Install Aliases (One-Time Setup)
+```bash
+# Auto-installer detects bash/fish and installs appropriate aliases
+./install-warp-aliases.sh
+
+# Then activate (bash users)
+source ~/.bashrc
+
+# Or activate (fish users)
+source ~/.config/fish/config.fish
+```
 
 ### 🚀 Enhanced Backup (Recommended)
 ```bash
-# Enhanced backup with permanent protection
-./warp-backup-enhanced.sh "important-backup-$(date +%Y-%m-%d)"
+# Enhanced backup with permanent protection (works in bash/fish)
+warp-backup-enhanced "important-backup-$(date +%Y-%m-%d)"
 
 # Quick enhanced backup
-./warp-backup-enhanced.sh
+warp-backup-quick
+
+# Or use script directly
+./warp-backup-enhanced.sh "important-backup-$(date +%Y-%m-%d)"
 ```
 
 ### 📥 Enhanced Restoration (Auto-Start MCP)

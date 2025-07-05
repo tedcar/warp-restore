@@ -4,15 +4,21 @@
 
 You are maintaining a Warp Settings Manager that preserves complete Warp Terminal configurations across account changes. The system is designed for 10+ year stability but may need adaptation if Warp changes its infrastructure.
 
+**IMPORTANT: Primary Shell Environment is BASH** - All scripts, aliases, and documentation assume bash as the main terminal environment. Fish is supported as secondary, but ZSH is explicitly not supported.
+
 ## Current System Status (July 2025)
 
 ### ✅ What Works Perfectly
 - **Complete backup/restore** of all Warp settings
+- **Bash shell integration** with full alias support (primary environment)
+- **Fish shell integration** with auto-installer (secondary support)
+- **Auto-installer** detects shell and installs appropriate aliases
 - **MCP server preservation** with API keys intact
 - **Auto-start functionality** (no manual Start button needed)
 - **Permanent backup protection** (never auto-deleted)
 - **System hardening** (protected from user accidents)
 - **Snapper integration** (creates "important" snapshots)
+- **ZSH rejection** (explicitly not supported - bash/fish only)
 
 ### 🔧 Key Files to Understand
 ```

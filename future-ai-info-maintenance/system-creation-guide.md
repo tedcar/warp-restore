@@ -4,6 +4,8 @@
 
 This document explains how the current Warp Settings Manager was built, so a future AI can understand the system architecture and adapt it if Warp's infrastructure changes.
 
+**Shell Environment: BASH PRIMARY** - System designed with bash as the main shell environment, with fish as secondary support. ZSH is explicitly not supported.
+
 ## System Architecture (July 2025)
 
 ### Core Problem Solved
@@ -22,7 +24,10 @@ Warp Terminal loses all settings (theme, MCP servers, API keys) when users creat
 #### 2. Enhanced Scripts (WarpManualSync/)
 - **`restore-complete-warp-settings.sh`**: Main restoration script with MCP auto-start
 - **`warp-backup-enhanced.sh`**: Hardened backup with permanent protection
-- **`warp-aliases.fish`**: Fish shell integration for easy commands
+- **`install-warp-aliases.sh`**: Auto-installer that detects bash/fish and installs appropriate aliases
+- **`warp-aliases.bash`**: Bash shell integration for easy commands (PRIMARY)
+- **`warp-aliases.fish`**: Fish shell integration for easy commands (SECONDARY)
+- **ZSH Support**: Explicitly NOT supported - system rejects zsh
 
 #### 3. MCP Server Handling (Critical)
 - **Database Tables**: `mcp_environment_variables`, `mcp_server_panes`, `pane_leaves`

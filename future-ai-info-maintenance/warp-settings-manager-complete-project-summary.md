@@ -2,10 +2,16 @@
 
 ## 🎯 PROJECT STATUS: ENHANCED & HARDENED FOR 10+ YEAR STABILITY ✅
 
+**Shell Environment: BASH PRIMARY** - System designed with bash as the main shell environment, with fish as secondary support and explicit ZSH rejection.
+
 ### Current State (July 5, 2025) - FINAL VERSION
 - **Theme/Settings Restoration**: ✅ WORKING
 - **MCP Server Database Restoration**: ✅ WORKING (servers in database)
 - **MCP Server UI Visibility**: ✅ FIXED (servers appear in Warp sidebar)
+- **Bash Shell Integration**: ✅ WORKING (primary environment)
+- **Fish Shell Integration**: ✅ WORKING (secondary support)
+- **Auto-Installer**: ✅ WORKING (detects shell and installs appropriate aliases)
+- **ZSH Support**: 🚫 EXPLICITLY NOT SUPPORTED
 - **MCP Auto-Start**: ✅ ENHANCED (no manual Start button required)
 - **API Key Preservation**: ✅ CONFIRMED (all API keys preserved)
 - **Backup Consistency**: ✅ FIXED (new backups consistently capture MCP servers)
