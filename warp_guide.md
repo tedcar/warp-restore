@@ -1,10 +1,24 @@
 # Warp Settings Manager - User Guide
 
+## 🚀 Quick Setup for New Users
+
+### Install Shell Aliases (Auto-Detects Bash/Fish)
+```bash
+# Auto-installer detects your shell and installs appropriate aliases
+./install-warp-aliases.sh
+
+# Then activate (bash users)
+source ~/.bashrc
+
+# Or activate (fish users)
+source ~/.config/fish/config.fish
+```
+
 ## Essential Commands You Need to Know
 
 ### 🔄 Creating Backups
 
-**After making any configuration changes:**
+**After making any configuration changes (works in bash and fish):**
 ```bash
 # Quick backup with auto-generated name
 warp-backup
@@ -13,7 +27,10 @@ warp-backup
 warp-backup "my-config-changes-2025-07-05"
 
 # Enhanced backup (recommended for important changes)
-./warp-backup-enhanced.sh "important-backup-$(date +%Y-%m-%d)"
+warp-backup-enhanced "important-backup-$(date +%Y-%m-%d)"
+
+# Quick timestamped backup
+warp-backup-quick
 ```
 
 **When to backup:**

@@ -23,12 +23,17 @@ cd warp-restore
 chmod +x *.sh
 ```
 
-### 3. Install Fish Aliases (Optional but Recommended)
+### 3. Install Shell Aliases (Auto-Detects Bash/Fish)
 ```bash
-# Add to your ~/.config/fish/config.fish
-cat warp-aliases.fish >> ~/.config/fish/config.fish
+# Auto-installer detects your shell and installs appropriate aliases
+./install-warp-aliases.sh
 
-# Reload Fish
+# Manual installation for bash
+cat warp-aliases.bash >> ~/.bashrc
+source ~/.bashrc
+
+# Manual installation for fish
+cat warp-aliases.fish >> ~/.config/fish/config.fish
 source ~/.config/fish/config.fish
 ```
 
@@ -37,7 +42,8 @@ source ~/.config/fish/config.fish
 # Enhanced backup (recommended)
 ./warp-backup-enhanced.sh "initial-setup-$(date +%Y-%m-%d)"
 
-# Or using Fish alias
+# Or using shell aliases (bash/fish)
+warp-backup-enhanced "initial-setup-$(date +%Y-%m-%d)"
 warp-backup "initial-setup-$(date +%Y-%m-%d)"
 ```
 
@@ -173,8 +179,10 @@ cp ~/.warp-settings-manager/backups/GOOD_BACKUP/critical/user_preferences.json ~
 warp-restore/
 ├── README.md                          # This file
 ├── warp_guide.md                      # Detailed user guide
+├── install-warp-aliases.sh           # Auto-installer for shell aliases
 ├── restore-complete-warp-settings.sh  # Main restoration script
 ├── warp-backup-enhanced.sh            # Enhanced backup script
+├── warp-aliases.bash                  # Bash shell integration
 ├── warp-aliases.fish                  # Fish shell integration
 ├── future-ai-info-maintenance/        # Documentation for future AI maintenance
 │   ├── system-creation-guide.md       # How the system was built
@@ -223,6 +231,14 @@ After restoration, you should see:
 ## 📄 License
 
 This project is designed for personal use. Feel free to adapt and modify for your needs.
+
+## 🐚 Shell Support
+
+- ✅ **Bash** - Full support with auto-installer
+- ✅ **Fish** - Full support with auto-installer
+- 🚫 **ZSH** - Not supported (use bash or fish instead)
+
+The auto-installer (`./install-warp-aliases.sh`) detects your shell and installs the appropriate aliases automatically.
 
 ## 🤝 Contributing
 
